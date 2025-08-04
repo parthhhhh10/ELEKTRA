@@ -1,5 +1,5 @@
 🚗 Elektra – Responsive Electric Car Showcase Website
-Welcome to Elecar, a stunning, fully responsive showcase for the latest electric cars from leading automotive brands. Built with a mobile-first approach and modern UI trends, Elecar delivers an outstanding experience on any device.
+Welcome to Elektra, a stunning, fully responsive showcase for the latest electric cars from leading automotive brands. Built with a mobile-first approach and modern UI trends, Elecar delivers an outstanding experience on any device.
 
 🌟 Features
 Modern Dark-Themed Interface: Luxurious, innovative aesthetic.
