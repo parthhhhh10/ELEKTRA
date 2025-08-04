@@ -82,17 +82,6 @@ Further enhance accessibility per WCAG standards.
 
 AI-powered vehicle recommendations.
 
-📜 License
-This project is licensed under the MIT License.
-
-💬 Contact
-For inquiry or collaboration:
-
-Name: [Your Name]
-
-Email: [Your Email]
-
-GitHub: [Your GitHub Profile]
 
 🙏 Acknowledgments
 Remix Icon for the fantastic icon library.
