@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <title>Elektra - Electric Car Showcase Website</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-steering-wheel-line"></i>
+                Elektra
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">Popular</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="shape shape__big"></div>
+            <div class="shape shape__small"></div>
+            
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">Choose The Best Car</h1>
+                    <h2 class="home__subtitle">Unleash Electric Luxury</h2>
+                    <h3 class="home__elec">
+                        <i class="ri-flashlight-line"></i>Elektra
+                    </h3>
+                </div>
+                
+                <img src="assets/img/b6e home1.png" alt="" class="home__img">
+                
+                <div class="home__car">
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-temp-cold-line"></i>
+                        </div>
+                        <h2 class="home__car-number">24°</h2>
+                        <h3 class="home__car-name">TEMPERATURE</h3>
+                    </div>
+                    
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-dashboard-3-line"></i>
+                        </div>
+                        <h2 class="home__car-number">873</h2>
+                        <h3 class="home__car-name">MILEAGE</h3>
+                    </div>
+                    
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-flashlight-line"></i>
+                        </div>
+                        <h2 class="home__car-number">94%</h2>
+                        <h3 class="home__car-name">BATTERY</h3>
+                    </div>
+                </div>
+                
+                <button class="home__start-button" aria-label="Start">
+                    START
+                </button>
+
+
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__group">
+                    <img src="assets/img/interior.png" alt="" class="about__img">
+                    
+                    <div class="about__card">
+                        <h3 class="about__card-title">2500+</h3>
+                        <p class="about__card-description">
+                            Supercharges placed along popular routes
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Machines With <br> Future Technology
+                    </h2>
+                    <p class="about__description">
+                        See the future with high-performance electric cars produced by renowned brands. 
+                        They feature futuristic builds and designs with new and innovative platforms 
+                        that last a long time.
+                    </p>
+                    <a href="#" class="button">Know More</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== POPULAR ====================-->
+        <section class="popular section" id="popular">
+            <h2 class="section__title">
+                Choose Your Electric Car <br> Of The Tata Brand
+            </h2>
+            
+            <div class="popular__container container swiper">
+                <div class="swiper-wrapper">
+                    <!--==================== POPULAR CARD 1 ====================-->
+                    <article class="popular__card swiper-slide">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="popular__title">Tata</h1>
+                        <h3 class="popular__subtitle">Nexon EV</h3>
+                        
+                        <img src="assets/img/nexon-ev.png" alt="" class="popular__img">
+                        
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-dashboard-3-line"></i>
+                                <h3 class="popular__data-title">4.6 Sec</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-speed-up-line"></i>
+                                <h3 class="popular__data-title">150 Km/h</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-flashlight-line"></i>
+                                <h3 class="popular__data-title">Electric</h3>
+                            </div>
+                        </div>
+                        
+                        <h3 class="popular__price">₹14.49 Lakh</h3>
+                        
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== POPULAR CARD 2 ====================-->
+                    <article class="popular__card swiper-slide">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="popular__title">Tata</h1>
+                        <h3 class="popular__subtitle">Curvv EV</h3>
+                        
+                        <img src="assets/img/curvv-ev.png" alt="" class="popular__img">
+                        
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-dashboard-3-line"></i>
+                                <h3 class="popular__data-title">Coming soon</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-speed-up-line"></i>
+                                <h3 class="popular__data-title">160 Km/h</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-flashlight-line"></i>
+                                <h3 class="popular__data-title">Electric</h3>
+                            </div>
+                        </div>
+                        
+                        <h3 class="popular__price">₹17.49 Lakh</h3>
+                        
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== POPULAR CARD 3 ====================-->
+                    <article class="popular__card swiper-slide">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="popular__title">Tata</h1>
+                        <h3 class="popular__subtitle">Tiago EV</h3>
+                        
+                        <img src="assets/img/tiago-ev.png" alt="" class="popular__img">
+                        
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-dashboard-3-line"></i>
+                                <h3 class="popular__data-title">6.2 Sec</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-speed-up-line"></i>
+                                <h3 class="popular__data-title">120 Km/h</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-flashlight-line"></i>
+                                <h3 class="popular__data-title">Electric</h3>
+                            </div>
+                        </div>
+                        
+                        <h3 class="popular__price">₹7.99 Lakh</h3>
+                        
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== POPULAR CARD 4 ====================-->
+                    <article class="popular__card swiper-slide">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="popular__title">Tata</h1>
+                        <h3 class="popular__subtitle">Harrier EV</h3>
+                        
+                        <img src="assets/img/harrier-ev.png" alt="" class="popular__img">
+                        
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-dashboard-3-line"></i>
+                                <h3 class="popular__data-title">5 Sec</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-speed-up-line"></i>
+                                <h3 class="popular__data-title">180 Km/h</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-flashlight-line"></i>
+                                <h3 class="popular__data-title">Electric</h3>
+                            </div>
+                        </div>
+                        
+                        <h3 class="popular__price">₹21.49 Lakh</h3>
+                        
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    <!--==================== POPULAR CARD 5 ====================-->
+
+                    <article class="popular__card swiper-slide">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="popular__title">Tata</h1>
+                        <h3 class="popular__subtitle">Punch</h3>
+                        
+                        <img src="assets/img/punch-ev.png" alt="" class="popular__img">
+                        
+                        <div class="popular__data">
+                            <div class="popular__data-group">
+                                <i class="ri-dashboard-3-line"></i>
+                                <h3 class="popular__data-title">4.2 Sec</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-speed-up-line"></i>
+                                <h3 class="popular__data-title">140 Km/h</h3>
+                            </div>
+                            <div class="popular__data-group">
+                                <i class="ri-flashlight-line"></i>
+                                <h3 class="popular__data-title">Electric</h3>
+                            </div>
+                        </div>
+                        
+                        <h3 class="popular__price">₹10.99 Lakh</h3>
+                        
+                        <button class="button popular__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                </div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--==================== FEATURES ====================-->
+        <section class="features section">
+            <h2 class="section__title">
+                More Features
+            </h2>
+            
+            <div class="features__container container grid">
+                <div class="features__group">
+                    <img src="assets/img/features.png" alt="" class="features__img">
+                    
+                    <div class="features__card features__card-1">
+                        <h3 class="features__card-title">800v</h3>
+                        <p class="features__card-description">Turbo <br> Charging</p>
+                    </div>
+                    
+                    <div class="features__card features__card-2">
+                        <h3 class="features__card-title">350</h3>
+                        <p class="features__card-description">Km <br> Range</p>
+                    </div>
+                    
+                    <div class="features__card features__card-3">
+                        <h3 class="features__card-title">480</h3>
+                        <p class="features__card-description">Km <br> Travel</p>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="assets/img/map.svg" alt="" class="features__map">
+        </section>
+
+        <!--==================== FEATURED ====================-->
+        <section class="featured section" id="featured">
+            <h2 class="section__title">
+                Featured Luxury Cars
+            </h2>
+            
+            <div class="featured__container container">
+                <ul class="featured__filters">
+                    <li>
+                        <button class="featured__item active-featured" data-filter="*">
+                            <span>All</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".tesla">
+                            <img src="assets/img/logo3.png" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".mahindra">
+                            <img src="assets/img/mahindra logo (2).png" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".bmw">
+                            <img src="assets/img/bmw logo.png" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="featured__item" data-filter=".mercedes">
+                            <img src="assets/img/mercedes logo.png" alt="">
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="featured__content grid" id="mix-cars">
+                    <!--==================== FEATURED CARD 0 ====================-->
+                    <article class="featured__card mix tesla">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Tesla</h1>
+                        <h3 class="featured__subtitle">Model Y</h3>
+                        
+                        <img src="assets/img/tesla model Y.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹59.89 Lakh</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <!--==================== FEATURED CARD 1 ====================-->
+                    <article class="featured__card mix tesla">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Tesla</h1>
+                        <h3 class="featured__subtitle">Model X</h3>
+                        
+                        <img src="assets/img/featured1.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">Coming Soon</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== FEATURED CARD 2 ====================-->
+                    <article class="featured__card mix tesla">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Tesla</h1>
+                        <h3 class="featured__subtitle">Model 3</h3>
+                        
+                        <img src="assets/img/featured2.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">Coming Soon</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== FEATURED CARD 3 ====================-->
+                    <article class="featured__card mix mahindra">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Mahindra</h1>
+                        <h3 class="featured__subtitle">BE 6E</h3>
+                        
+                        <img src="assets/img/mahindra be6e.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹25 Lakh</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== FEATURED CARD 4 ====================-->
+                    <article class="featured__card mix mahindra">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Mahindra</h1>
+                        <h3 class="featured__subtitle">XEV 9E</h3>
+                        
+                        <img src="assets/img/mahindra xev 9e.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹45 Lakh</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <!--==================== FEATURED CARD 4 ====================-->
+                    <article class="featured__card mix mahindra">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Mahindra</h1>
+                        <h3 class="featured__subtitle">XUV 400</h3>
+                        
+                        <img src="assets/img/mahindra xuv400.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹45 Lakh</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== FEATURED CARD 6 ====================-->
+                    <article class="featured__card mix bmw">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">BMW</h1>
+                        <h3 class="featured__subtitle">IX1 LWB</h3>
+                        
+                        <img src="assets/img/bmw iX1 LWB.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹49 Lakh</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+                    
+                    <!--==================== FEATURED CARD 6 ====================-->
+                    <article class="featured__card mix mercedes">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Mercedes</h1>
+                        <h3 class="featured__subtitle">EQS</h3>
+                        
+                        <img src="assets/img/mercedes eqs.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹1.41 Crore</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                    <!--==================== FEATURED CARD 6 ====================-->
+                    <article class="featured__card mix mercedes">
+                        <div class="shape shape__smaller"></div>
+                        
+                        <h1 class="featured__title">Mercedes</h1>
+                        <h3 class="featured__subtitle">G-Class EV</h3>
+                        
+                        <img src="assets/img/mercedes g-class.png" alt="" class="featured__img">
+                        
+                        <h3 class="featured__price">₹3 Crore</h3>
+                        
+                        <button class="button featured__button">
+                            <i class="ri-shopping-bag-2-line"></i>
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== OFFER ====================-->
+        <section class="offer section">
+            <div class="offer__container container grid">
+                <img src="assets/img/offer-bg.png" alt="" class="offer__bg">
+                
+                <div class="offer__data">
+                    <h2 class="section__title offer__title">
+                        Do You Want To Receive <br> Special Offers?
+                    </h2>
+                    <p class="offer__description">
+                        Be the first to receive all the information about our products and new cars by email by subscribing to our mailing list.
+                    </p>
+                    <a href="#" class="button">Subscribe Now</a>
+                </div>
+                
+                <img src="assets/img/offer.png" alt="" class="offer__img">
+            </div>
+        </section>
+
+        <!--==================== LOGOS ====================-->
+        <section class="logos section">
+            <div class="logos__container container grid">
+                <div class="logos__content">
+                    <img src="assets/img/tata logo.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/mahindra logo.png" alt="" class="logos__img">
+                </div>
+            
+                <div class="logos__content">
+                    <img src="assets/img/tesla logo.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/bmw logo (2).png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/mercedes logo.png" alt="" class="logos__img">
+                </div>
+                <div class="logos__content">
+                    <img src="assets/img/logo6.png" alt="" class="logos__img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="shape shape__big"></div>
+        <div class="shape shape__small"></div>
+        
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="ri-steering-wheel-line"></i> Elektra
+                </a>
+                
+                <p class="footer__description">
+                    We offer the best electric cars of the <br> 
+                    most recognized brands in the world.
+                </p>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Company</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Cars</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">History</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Shop</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Request a quote</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Find a dealer</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Services</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer__content">
+                <h3 class="footer__title">Follow us</h3>
+                
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        
+        <span class="footer__copy">
+            &#169; Elektra Cars. All rigths reserved
+        </span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

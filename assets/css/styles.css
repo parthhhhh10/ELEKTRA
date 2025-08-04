@@ -1,0 +1,1077 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem; /* Corrected space: 3.5 rem -> 3.5rem */
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(219, 69%, 56%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(219, 8%, 95%);
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: hsl(219, 4%, 4%);
+  --container-color: hsl(219, 4%, 7%);
+
+  /*========== Font and typography ==========*/
+  /*.5 rem = 8px | 1 rem = 16px ...*/
+  --body-font: 'Exo', sans-serif;
+  --h1-font-size: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+  --h2-font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+  --h3-font-size: 1rem; /* Corrected space: 1 rem -> 1rem */
+  --normal-font-size: .938rem; /* Corrected space: .938 rem -> .938rem */
+  --small-font-size: .813rem; /* Corrected space: .813 rem -> .813rem */
+  --smaller-font-size: .75rem; /* Corrected space: .75 rem -> .75rem */
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem; /* Corrected space: 2.25 rem -> 2.25rem */
+    --h2-font-size: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+    --h3-font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+    --normal-font-size: 1rem; /* Corrected space: 1 rem -> 1rem */
+    --small-font-size: .875rem; /* Corrected space: .875 rem -> .875rem */
+    --smaller-font-size: .813rem; /* Corrected space: .813 rem -> .813rem */
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE =============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+  margin-left: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+}
+
+.section {
+  padding: 4.5rem 0 2rem; /* Corrected space: 4.5 rem -> 4.5rem, 2 rem -> 2rem */
+}
+
+.section__title {
+  font-size: var(--h2-font-size); /* Corrected variable name: --h2-font- -> --h2-font-size */
+  text-align: center;
+  margin-bottom: 2.5rem; /* Corrected space: 2.5 rem -> 2.5rem */
+}
+
+.main {
+  overflow: hidden;
+}
+.shape{
+  background-color: hsla(219, 33% ,32% , .5 );
+  filter: blur(112px); /* Corrected space: 112 px -> 112px */
+  border-radius: 50%;
+}
+.shape__big{
+  width: 400px; /* Corrected space: 400 px -> 400px */
+  height: 400px; /* Corrected space: 400 px -> 400px */
+}
+.shape__small{
+width: 300px; /* Corrected space: 300 px -> 300px */
+height: 300px; /* Corrected space: 300 px -> 300px */
+}
+.shape__smaller{
+  width: 180px; /* Corrected space: 180 px -> 180px */
+  height: 180px; /* Corrected space: 180 px -> 180px */
+  filter: blur(64px); /* Corrected space: 64 px -> 64px */
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle{
+  color: var(--title-color);
+  display: inline-flex;
+
+}
+
+.nav__logo{
+  align-items: center;
+  column-gap: .25rem; /* Corrected column-gap: 25 rem -> .25rem (Assuming a small gap) */
+  font-weight: var(--font-medium);
+  transition: .3s; /* Corrected transition: 3s -> .3s (3 seconds is very long) */
+}
+.nav__logo i{
+  font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+}
+
+.nav__logo:hover { /* Added colon for :hover pseudo-class */
+  color: var(--first-color);
+}
+
+.nav__toggle{
+  font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu{
+    position: fixed;
+    background-color: hsla(0 , 0%, 100% , .1);
+    top: 0;
+    right: -100%; /* Corrected value: -100 -> -100% */
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(96px); /* Corrected space: 96 px -> 96px */
+    transition: .3s; /* Corrected transition: 3s -> .3s */
+  }
+
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 3rem; /* Corrected space: 3 rem -> 3rem */
+  padding-top: 9rem; /* Corrected space: 9 rem -> 9rem */
+
+}
+
+.nav__link {
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  transition: .3s; /* Corrected transition: 3s -> .3s */
+}
+
+.nav__link:hover{ /* Added colon for :hover pseudo-class */
+  color: var(--first-color);
+}
+
+.nav__close{
+  font-size: 2rem; /* Corrected space: 2 rem -> 2rem */
+  color: var(--white-color);
+  position: absolute;
+  top: 1rem; /* Corrected space: 1 rem -> 1rem */
+  right: 1rem; /* Corrected space: 1 rem -> 1rem */
+  cursor: pointer;
+}
+
+
+/* Show menu */
+.show-menu{
+  right: 0;
+}
+/* Change background header */
+.scroll-header{
+  border-radius: 0 0 1rem; /* Corrected space: 1 rem -> 1rem */
+  background-color:  var(--body-color);
+  box-shadow: 0 2px 4px hsla( 0 , 0% , 1% ,.1); /* Corrected space and alpha value: 2 px -> 2px, 1 -> .1 (for visibility) */
+}
+/* Active link */
+.active-link{
+  color: var(--first-color);
+}
+
+/*=============== HOME ===============*/
+.home{
+  position: relative;
+  overflow: hidden;
+
+}
+
+.home__container {
+  position: relative;
+  padding-top: 4rem; /* Corrected space: 4 rem -> 4rem */
+  row-gap: 3rem; /* Corrected space: 3 rem -> 3rem */
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__title{
+  font-size: var(--h1-font-size);
+  margin-bottom: 2.5rem; /* Corrected margin: 25 rem -> 2.5rem (assuming a typo for 2.5rem) */
+}
+
+.home__elec{
+  font-size: var(--small-font-size);
+  font-weight: 400 ;
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem; /* Corrected column-gap: 25 rem -> .25rem (Assuming a small gap) */
+}
+
+.home__img{
+  width: 280px; /* Corrected space: 280 px -> 280px */
+  justify-self: center;
+}
+
+.home__car{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4rem; /* Corrected space: 4 rem -> 4rem */
+  margin-bottom: 2rem; /* Corrected space: 2 rem -> 2rem */
+}
+
+.home__car-name{
+  font-size: .625rem; /* Corrected font-size: 625 rem -> .625rem (assuming a typo for .625rem or 62.5rem, but 0.625rem is more plausible) */
+  font-weight: 400;
+  color: var(--text-color-light);
+}
+
+.home__car-data{
+  text-align: center;
+}
+
+.home__car-number{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: .25rem; /* Corrected margin: 25 rem -> .25rem (assuming a typo for 0.25rem) */
+}
+
+.home__car-icon{
+  background-color: var(--container-color);
+  border-radius: 50% ;
+  padding: .375rem; /* Corrected space: .376 rem -> .375rem (common rem value) */
+  display: inline-flex ;
+  justify-content: center ;
+  font-size: .875rem; /* Corrected font-size: 875 rem -> .875rem (assuming a typo for 0.875rem) */
+  margin-bottom: .75rem; /* Corrected margin: 75 rem -> .75rem (assuming a typo for 0.75rem) */
+}
+.home__button{
+  position: relative;
+  border: 2px solid hsl(158 , 89% , 30% );
+  display: flex;
+  align-items: center ;
+  justify-content: center ;
+  justify-self: center ;
+  font-size: var(--small-font-size);
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+
+.home__button::before{ /* Added colon for ::before pseudo-element */
+  content: '';
+  border: 2px solid hsl(158, 98% , 43% );
+  width: 90px; /* Corrected space: 90 px -> 90px */
+  height: 90px; /* Corrected space: 90 px -> 90px */
+  position: absolute ;
+  border-radius: 50% ;
+  box-shadow: 0 0 12px hsl(158, 98% , 43%); /* Corrected space: 12 px -> 12px */
+  transition: 3s;
+  animation: button 3s infinite ;
+
+}
+
+.home .shape__big,
+.home .shape__small{
+  position:absolute;
+}
+
+.home .shape__small{
+  right: -10rem; /* Corrected space: -10 rem -> -10rem */
+  bottom : 3rem; /* Corrected space: 3 rem -> 3rem */
+}
+
+/* Button animate */
+
+@keyframes button
+{
+  0% {
+    box-shadow: 0 0 12px hsl(158, 98% , 43%); /* Corrected space: 12 px -> 12px */
+  }
+  50%{
+    box-shadow: 0 0 24px hsl(158, 98% , 43%); /* Corrected space: 24 px -> 24px */
+  }
+  100% { /* Added 100% keyframe for a complete animation cycle */
+    box-shadow: 0 0 12px hsl(158, 98% , 43%);
+  }
+
+}
+
+/*=============== BUTTON ===============*/
+
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 2rem; /* Corrected commas to spaces for padding: 1 rem , 2 rem -> 1rem 2rem */
+  border-radius: .25rem; /* Corrected space: .25 rem -> .25rem */
+  font-size: var(--normal-font-size);
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: var(--first-color-alt); /* Changed to first-color-alt for a subtle hover effect, or keep first-color if no change is desired */
+}
+/*=============== ABOUT ===============*/
+.about__container{
+  row-gap: 6rem; /* Corrected space: 6 rem -> 6rem */
+}
+
+.about-group{
+  position: relative;
+}
+
+.about__img{
+  width: 310px; /* Corrected space: 310 px -> 310px */
+  border-radius: .5rem; /* Corrected space: .5 rem -> .5rem */
+}
+
+.about__card {
+  width: 180px; /* Corrected space: 180 px -> 180px */
+  position:absolute;
+  right: 0 ;
+  bottom: -2.5rem; /* Corrected space: -2.5 rem -> -2.5rem */
+  background-color: hsla(0 , 0%, 100% , .1);
+  backdrop-filter: blur(16px); /* Corrected space: 16 px -> 16px */
+  padding: 1rem .75rem; /* Corrected commas to spaces for padding: 1 rem , .75 rem -> 1rem .75rem */
+  text-align: center;
+  border-radius: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+
+}
+
+.about__card-title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem; /* Corrected space: .5 rem -> .5rem */
+}
+
+.about__description{
+  margin-bottom: 2rem; /* Corrected space: 2 rem -> 2rem */
+}
+
+
+/*=============== POPULAR ===============*/
+.popular__container{
+  padding-top: 1rem; /* Corrected space: 1 rem -> 1rem */
+}
+
+.popular__card{
+  position: relative;
+  width: 238px; /* Corrected space: 238 px -> 238px */
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem 1.5rem; /* Corrected commas to spaces for padding: 2 rem , 1.5 rem , 1.5 rem -> 2rem 1.5rem 1.5rem */
+  border-radius: 1rem; /* Corrected space: 1 rem -> 1rem */
+  margin-bottom: 3.5rem; /* Corrected space: 3.5 rem -> 3.5rem */
+  overflow: hidden;
+}
+
+.popular__card .shape__smaller{
+position: absolute;
+top: -2.5rem; /* Corrected space: -2.5 rem -> -2.5rem */
+left: 2.5rem; /* Corrected space: 2.5 rem -> 2.5rem */
+}
+
+.popular__title,
+.popular__subtitle,
+.popular__img{
+  position: relative;
+}
+.popular__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .25rem; /* Corrected space: .25 rem -> .25rem */
+}
+
+.popular__subtitle{
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: 400 ;
+}
+.popular__img{
+  width: 160px; /* Corrected space: 160 px -> 160px */
+  margin: .75rem 0 1.25rem 1.5rem; /* Corrected spaces and commas: .75 rem 0 1.25 rem 1.5 rem -> .75rem 0 1.25rem 1.5rem */
+  transition: .3s;
+}
+
+.popular__data{
+  display: grid;
+  grid-template-columns: repeat(2, max-content); /* Corrected space: repeat ( 2, max-content) -> repeat(2, max-content) */
+  gap: .5rem 1.25rem; /* Corrected space: .5 rem 1.25 rem -> .5rem 1.25rem */
+  margin-bottom: 2rem; /* Corrected space: 2 rem -> 2rem */
+}
+.popular__data-group{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem; /* Corrected space: .5 rem -> .5rem */
+  font-size: var(--small-font-size);
+  color: var(--white-color);
+}
+.popular__data i {
+  font-size: 1rem; /* Corrected space: 1 rem -> 1rem */
+}
+.popular__price{
+  font-size: var(--h3-font-size);
+}
+.popular__button{
+  border: none;
+  outline: none;
+  padding: .75rem 1rem; /* Corrected commas to spaces for padding: .75 rem , 1 rem -> .75rem 1rem */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem 0 1rem 0; /* Corrected space: 1 rem 0 1 rem 0 -> 1rem 0 1rem 0 */
+  cursor: pointer;
+}
+.popular__button i{
+  font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+}
+.popular__card:hover .popular__img{ /* Added colon for :hover pseudo-class */
+  transform: translateX(-2.5rem); /* Corrected property: translate -> translateX, space: -2.5 rem -> -2.5rem */
+}
+/* Swiper class */
+.swiper-pagination-bullet{
+ background: var(--text-color);
+}
+.swiper-pagination-bullet-active{
+  background-color: var(--first-color);
+}
+/*=============== FEATURES ===============*/
+.features{
+  overflow: hidden;
+  position: relative;
+}
+.features__container{
+  padding-top: 2rem; /* Corrected space: 2 rem -> 2rem */
+  grid-template-columns: 285px; /* Corrected space: 285 px -> 285px */
+  justify-content: center;
+}
+.features__group{
+  display: grid;
+  position: relative;
+  z-index: 10;
+}
+.features__img{
+  width: 150px; /* Corrected space: 150 px -> 150px */
+  justify-self: center;
+}
+.features__card{
+width: 112px; /* Corrected space: 112 px -> 112px */
+background-color: hsla(0 , 0%, 100% , .1);
+backdrop-filter: blur(16px); /* Corrected space: 16 px -> 16px */
+border-radius: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+padding: .75rem 2rem; /* Corrected commas to spaces for padding: .75 rem 2 rem -> .75rem 2rem */
+text-align: center;
+color: var(--title-color);
+position: absolute;
+}
+.feature-card-1 {
+  top: 60%;
+  left: 10%;
+  width: 160px;
+}
+.feature-card-2 {
+  top: 80%;
+  left: 40%;
+  width: 160px;
+}
+.feature-card-3 {
+  top: 40%;
+  right: 8%;
+  width: 160px;
+}
+.features__description{
+  font-size: var(--smaller-font-size);
+}
+.features__map{
+  max-width: initial;
+  width: 450px; /* Corrected space: 450 px -> 450px */
+  position: absolute;
+  top: 8rem; /* Corrected space: 8 rem -> 8rem */
+  left: -3rem; /* Corrected space: -3 rem -> -3rem */
+  margin: auto;
+  transform: rotate(-22deg); /* Corrected space: -22 deg -> -22deg */
+}
+/*=============== FEATURED ===============*/
+.featured__container{
+  padding-top: 1rem; /* Corrected space: 1 rem -> 1rem */
+}
+.featured__filters{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ column-gap: 1rem; /* Corrected space: 1 rem -> 1rem */
+ margin-bottom: 3.5rem; /* Corrected space: 3.5 rem -> 3.5rem */
+}
+.featured__item{
+  width: 48px; /* Corrected space: 48 px -> 48px */
+  height: 48px; /* Corrected space: 48 px -> 48px */
+  border: none;
+  outline: none;
+  padding: .75rem; /* Corrected space: .75 rem -> .75rem */
+  border-radius: .75rem; /* Corrected space: .75 rem -> .75rem */
+  background-color: var(--container-color);
+  color: var(--white-color); /* This seems redundant as font-size is also set to white-color */
+  font-size: var(--normal-font-size); /* Changed from var(--white-color) as it's a color variable */
+  cursor: pointer;
+  transition: .3s;
+}
+.featured__item span,
+.featured__item img
+{ opacity: .3;
+  transition: .3s;
+}
+.featured__item:hover{ /* Added colon for :hover pseudo-class */
+  background-color: var(--first-color);
+}
+.featured__item:hover span, /* Added colon for :hover pseudo-class */
+.featured__item:hover img{ /* Added colon for :hover pseudo-class */
+  opacity: 1 ;
+}
+.featured-content{
+  grid-template-columns: 228px; /* Corrected space: 228 px -> 228px */
+  row-gap: 2.5rem; /* Corrected space: 2.5 rem -> 2.5rem */
+  justify-content: center;
+}
+.featured__card{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem 1.5rem; /* Corrected commas to spaces for padding: 2 rem 1.5 rem 1.5 rem -> 2rem 1.5rem 1.5rem */
+  border-radius: 1rem; /* Corrected space: 1 rem -> 1rem */
+}
+.featured__card .shape__smaller{
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+.featured__title,
+.featured__subtitle,
+.featured-img{ /* Changed featured-img to .featured__img to match HTML structure if it's a class */
+  position: relative;
+}
+.featured__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .25rem; /* Corrected space: .25 rem -> .25rem */
+}
+.featured__subtitle{
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: 400;
+}
+.featured__img{ /* Changed from .featured-img to .featured__img */
+  width: 180px; /* Corrected space: 180 px -> 180px */
+  margin: 1.5rem 0; /* Corrected space: 1.5 rem 0 -> 1.5rem 0 */
+  transition: .3s;
+}
+.featured__price{
+  font-size: var(--h3-font-size);
+}
+.featured__button{
+  border: none;
+  outline: none;
+  padding: .75rem 1rem; /* Corrected space: 75 rem -> .75rem, 1 rem -> 1rem */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem 0 1rem 0; /* Corrected space: 1 rem 0 rem 1 rem 0 -> 1rem 0 1rem 0 */
+  cursor: pointer;
+}
+.featured__button i{
+  font-size: 1.25rem; /* Corrected value: 1.25 -> 1.25rem */
+}
+.featured__card:hover .featured__img{ /* Added colon for :hover pseudo-class */
+  transform: translateX(-2.5rem); /* Corrected property: translate -> translateX, space: -2.5 rem -> -2.5rem */
+}
+/* Active link featured */
+.active-featured{
+  background-color: var(--first-color);
+}
+.active-featured span,
+.active-featured img {
+  opacity: 1 ;
+}
+
+/*=============== OFFER ===============*/
+.offer{
+  position: relative;
+}
+/* The following .offer selector duplicates the previous one, consider if this is intended */
+.offer{
+  grid-template-rows: max-content 224px; /* Corrected space: 224 px -> 224px */
+}
+.offer__bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover;
+  object-position: center;
+}
+
+.offer__data,
+.offer__img{ /* Changed offer-img to .offer__img to match HTML structure if it's a class */
+  position: relative;
+}
+.offer__data{
+  text-align: center;
+}
+.offer__title{
+  margin-bottom: 3rem; /* Corrected space: 3 rem -> 3rem */
+}
+.offer__img{ /* Changed from .offer-img to .offer__img */
+  position: absolute;
+  max-width: initial;
+  width: 400px; /* Corrected space: 400 px -> 400px */
+  bottom: 2rem; /* Corrected space: 2 rem -> 2rem */
+  right: -5.5rem; /* Corrected space: -5.5 rem -> -5.5rem */
+}
+/*=============== LOGOS ===============*/
+.logos__img{
+  width: 40px; /* Corrected space: 40 px -> 40px */
+  opacity: .4 ;
+  transition: .3s ;
+}
+.logos__container{
+  grid-template-columns: repeat(3, max-content); /* Corrected space: repeat( 3, max-content) -> repeat(3, max-content) */
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Corrected space: 4 rem -> 4rem */
+  padding-bottom: 2rem; /* Corrected space: 2 rem -> 2rem */
+}
+.logos__img:hover{ /* Added colon for :hover pseudo-class */
+  opacity: 1 ;
+}
+/*=============== FOOTER ===============*/
+.footer{
+  position: relative;
+  overflow: hidden;
+}
+ .footer .shape__big,
+ .footer .shape__small{
+  position: absolute;
+ }
+ .footer .shape__big{
+  width: 300px; /* Corrected space: 300 px -> 300px */
+  height: 300px; /* Corrected space: 300 px -> 300px */
+  left: -12rem; /* Corrected space: -12 rem -> -12rem */
+  top: 6rem; /* Corrected space: 6 rem -> 6rem */
+ }
+.footer .shape__small{
+  right: -13rem; /* Corrected space: -13 rem -> -13rem */
+  bottom: -6rem; /* Corrected space: -6 rem -> -6rem */
+}
+.footer__container{
+  row-gap: 2.5rem; /* Corrected space: 2.5 rem -> 2.5rem */
+  position: relative;
+}
+.footer__logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem; /* Corrected space: .25 rem -> .25rem */
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+  transition: .3s; /* Corrected transition: .3s */
+}
+.footer__logo i {
+  font-size: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+  font-weight: 500;
+}
+.footer__logo:hover{ /* Added colon for :hover pseudo-class */
+  color: var(--first-color);
+}
+.footer__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+}
+.footer__links{
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem; /* Corrected row-gap: 5 rem -> .5rem (5rem is a very large gap for links) */
+}
+.footer__link,
+.footer__social-link{
+  color: var(--text-color);
+  transition: .3s ;
+}
+.footer__link:hover, /* Added colon for :hover pseudo-class */
+.footer__social-link:hover{ /* Added colon for :hover pseudo-class */
+  color: var(--title-color);
+}
+.footer__social{
+  display: flex;
+  column-gap: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+}
+.footer__social-link{
+  font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+}
+.footer__copy{
+  display: block;
+  margin-top: 4.5rem; /* Corrected space: 4.5 rem -> 4.5rem */
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+
+}
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem; /* Corrected space: .6 rem -> .6rem */
+  background-color: hsl(219, 4%, 16%);
+  border-radius: 1rem; /* Corrected space: 1 rem -> 1rem */
+}
+::-webkit-scrollbar-thumb{
+  background-color: hsl(219, 4%, 24%);
+  border-radius: 1rem; /* Corrected space: 1 rem -> 1rem */
+}
+::-webkit-scrollbar-thumb:hover{ /* Added colon for :hover pseudo-class */
+  background-color: hsl(219, 4%, 32%);
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem; /* Corrected space: 1 rem -> 1rem */
+  bottom: -30rem; /* Corrected space: -30 rem -> -30rem */
+  background-color: hsla(0 , 0%, 100% , .1);
+  backdrop-filter: blur(16px); /* Corrected space: 16 px -> 16px */
+  display: inline-flex;
+  padding: .45rem; /* Corrected space: .45 rem -> .45rem */
+  border-radius: .5rem; /* Corrected space: .5 rem -> .5rem */
+  font-size: 1.15rem; /* Corrected space: 1.15 rem -> 1.15rem */
+  color: var(--white-color);
+  z-index: var(--z-tooltip);
+  transition: .4s ;
+}
+.scrollup:hover{ /* Added colon for :hover pseudo-class */
+  transform: translateY(-.25rem); /* Corrected property: translate -> translateY, space: - .25 rem -> -.25rem */
+}
+
+/* Show Scroll Up*/
+.show-scroll{
+  bottom: 3rem; /* Corrected space: 3 rem -> 3rem */
+
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) { /* Added px to 320 */
+  .container{
+    margin-left: 1rem; /* Corrected space: 1 rem -> 1rem */
+    margin-right: 1rem; /* Corrected space: 1 rem -> 1rem */
+  }
+  .home__car{
+    column-gap: 2rem; /* Corrected space: 2 rem -> 2rem */
+  }
+  .about__card{
+    width: 150px; /* Corrected space: 150 px -> 150px */
+  }
+  .offer__img{
+    width: 340px; /* Corrected space: 340 px -> 340px */
+  }
+  .logos__container{
+    gap: 2.5rem; /* Corrected space: 2.5 rem -> 2.5rem */
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+  .about-group {
+    width: 350px; /* Corrected space: 350 px -> 350px */
+    justify-self: center;
+  }
+  .features__map{
+    left: 0;
+    right: 0;
+  }
+  .featured-content{
+    grid-template-columns: repeat(2, 228px); /* Corrected space: repeat(2,228 px ) -> repeat(2, 228px) */
+  }
+  .offer__container{
+    grid-template-rows: initial;
+    grid-template-columns: .5fr; /* Corrected space: .5 fr -> .5fr */
+    justify-content: center;
+  }
+  .offer__img{
+    position: relative;
+    bottom: initial;
+    right: initial;
+  }
+  .offer__data{
+    margin-bottom: 4rem; /* Corrected space: 4 rem -> 4rem */
+  }
+}
+@media screen and (min-width: 767px){
+  .section{
+    padding: 7rem 0 2rem; /* Corrected space: 7 rem -> 7rem, 2 rem -> 2rem */
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav__list{
+    flex-direction: row;
+    column-gap: 3rem; /* Corrected space: 3 rem -> 3rem */
+    padding-top: 0;
+  }
+  .nav__link{
+    font-size: var(--normal-font-size);
+    text-transform: initial;
+  }
+  .about__container{
+    grid-template-columns: repeat(2, 1fr); /* Corrected space: repeat(2, 1 fr ) -> repeat(2, 1fr) */
+  }
+  .logos__container{
+    gap: 4rem 8rem; /* Corrected space: 4 rem 8 rem -> 4rem 8rem */
+  }
+  .footer__container{
+    grid-template-columns: repeat(2,1fr); /* Corrected space: repeat(2,1 fr) -> repeat(2, 1fr) */
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1040px){ /* Changed main-width to min-width */
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .shape__big{
+    width: 500px; /* Corrected space: 500 px -> 500px */
+    height: 500px; /* Corrected space: 500 px -> 500px */
+  }
+  .shape__small{ /* Removed nested .shape__small, it was incorrectly placed */
+    width: 400px; /* Corrected space: 400 px -> 400px */
+    height: 400px; /* Corrected space: 400 px -> 400px */
+  }
+  .home__container{
+    padding-top: 2rem; /* Corrected space: 2 rem -> 2rem */
+  }
+  .home__img{
+    width: 380px; /* Corrected space: 380 px -> 380px */
+  }
+  .home__car{
+    column-gap: 7rem; /* Corrected space: 7 rem -> 7rem */
+  }
+  .home__car-icon{
+    font-size: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+    margin-bottom: 1rem; /* Corrected space: 1 rem -> 1rem */
+  }
+  .about__container{
+    column-gap: 6rem; /* Corrected space: 6 rem -> 6rem */
+    align-items: center;
+  }
+  .about-group,
+  .about__img{
+    width: 480px; /* Corrected space: 480 px -> 480px */
+  }
+  .about__card{
+    width: 198px; /* Corrected space: 198 px -> 198px */
+    padding: 1rem 1.25rem; /* Corrected commas to spaces for padding: 1 rem 1.25 rem -> 1rem 1.25rem */
+  }
+  .about__description{
+  padding-right: 4rem; /* Corrected space: 4 rem -> 4rem */
+  margin-bottom: 3rem; /* Corrected space: 3 rem -> 3rem */
+  }
+  .popular__container{
+    width: 875px; /* Corrected space: 875 px -> 875px */
+    padding-top: 3rem; /* Corrected space: 3 rem -> 3rem */
+  }
+  .popular__card{
+    width: 258px; /* Corrected space: 258 px -> 258px */
+    border-radius: 1.25rem; /* Corrected space: 1.25 rem -> 1.25rem */
+    margin-bottom: 5rem; /* Corrected space: 5 rem -> 5rem */
+  }
+  .popular__img{
+    width: 180px; /* Corrected space: 180 px -> 180px */
+    margin: .75rem 0 1.25rem 2rem; /* Corrected spaces and commas: .75 rem 0 1.25 rem 2 rem -> .75rem 0 1.25rem 2rem */
+  }
+  .features__container{
+    padding: 2rem 0 3rem; /* Corrected space: 2 rem -> 2rem, 3 rem -> 3rem */
+  }
+  .featured__img{
+    width: 200px; /* Corrected space: 200 px -> 200px */
+  }
+  .features__card{
+    width: 127px; /* Corrected space: 127 px -> 127px */
+    padding: .75rem 2.5rem; /* Corrected spaces: .75 rem 2.5 rem -> .75rem 2.5rem */
+    }
+  .features__card-1{
+    left: -1rem; /* Corrected space: -1 rem -> -1rem */
+  }
+  .features__card-2{
+    right: -2.5rem; /* Corrected space: -2.5 rem -> -2.5rem */
+  }
+  .features__card-3{
+    bottom: 7rem; /* Corrected space: 7 rem -> 7rem */
+    left: -1rem; /* Corrected space: -1 rem -> -1rem */
+  }
+  .features__map{
+    width: 650px; /* Corrected space: 650 px -> 650px */
+    top: 11rem; /* Corrected space: 11 rem -> 11rem */
+  }
+  .featured__container{
+    padding-bottom: 2.5rem; /* Corrected space: 2.5 rem -> 2.5rem */
+  }
+  .featured__filters{
+    column-gap: 2rem; /* Corrected space: 2 rem -> 2rem */
+    margin-bottom: 4.5rem; /* Corrected space: 4.5 rem -> 4.5rem */
+  }
+  .featured-content{
+    grid-template-columns: repeat(3 , 248px); /* Corrected space: repeat(3 , 248 px ) -> repeat(3 , 248px) */
+    gap: 4rem; /* Corrected space: 4 rem -> 4rem */
+  }
+  .offer__container{
+    grid-template-columns: repeat(2 , 1fr); /* Corrected space: repeat(2 , 1 fr ) -> repeat(2 , 1fr) */
+    column-gap: 5rem; /* Corrected space: 5 rem -> 5rem */
+    align-items: center;
+    padding-bottom: 2rem; /* Corrected space: 2 rem -> 2rem */
+  }
+  .offer__data,
+  .offer__title{
+    text-align: initial;
+  }
+  .offer__data{
+    margin-bottom: 0;
+  }
+  .offer__description{
+    padding-right: 6rem; /* Corrected space: 6 rem -> 6rem */
+  }
+  .offer__img{
+    width: 450px; /* Corrected space: 450 px -> 450px */
+  }
+  .logos__container{
+    grid-template-columns: repeat(6 , max-content);
+  }
+  .logos__img{
+    width: 50px; /* Corrected space: 50 px -> 50px */
+  }
+  .footer__container{
+    grid-template-columns:  repeat(4, max-content);
+    justify-content: space-between;
+  }
+  .footer__logo{
+    column-gap: .5rem; /* Corrected space: .5 rem -> .5rem */
+  }
+  .footer__logo i {
+    font-size: 2rem; /* Corrected space: 2 rem -> 2rem */
+  }
+  .footer__title{
+    margin-bottom: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+  }
+  .footer__links{
+    row-gap: .75rem; /* Corrected row-gap: .75 rem -> .75rem */
+  }
+ .footer__social-link{
+  font-size: 1.5rem; /* Corrected space: 1.5 rem -> 1.5rem */
+ }
+ .footer__copy{
+  margin-top : 8rem; /* Corrected space: 8 rem -> 8rem */
+  padding-bottom: 1rem; /* Corrected space: 1 rem -> 1rem */
+ }
+ .scrollup{
+  right: 3rem; /* Corrected space: 3 rem -> 3rem */
+ }
+}
+
+.home__start-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.7rem auto 0 auto;
+  width: 92px;
+  height: 92px;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-family: inherit;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 5px rgba(48, 233, 228, 0.10),
+    0 0 18px 0 rgba(80,255,168,0.48),
+    0 0 16px 0 #2fffba;
+  transition: box-shadow 0.3s;
+  z-index: 2;
+  text-shadow: 0 0 8px #09eace, 0 0 10px #52fff3;
+}
+
+.home__start-button:hover,
+.home__start-button:focus {
+  box-shadow:
+    0 0 0 8px rgba(34,209,238, 0.28),
+    0 0 48px 4px #37fff5,
+    0 0 32px 2px #12b4cc;
+}
+
+.home__start-button::before {
+  content: "";
+  position: absolute;
+  top: 7px; left: 7px; right: 7px; bottom: 7px;
+  border: 2.5px solid #30e9e4;
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 0 20px 5px #49ffff80;
+  z-index: 1;
+  transition: box-shadow 0.3s;
+  pointer-events: none;
+}
+
+.home__start-button:focus-visible {
+  outline: 2px solid #28ffff;
+  outline-offset: 4px;
+}
