@@ -31,7 +31,7 @@ Git & GitHub: Version control and collaborative platform.
 Run locally in 3 easy steps:
 
 bash
-git clone https://github.com/your-username/elecar-responsive-car-website.git
+git clone https://github.com/parthhhhh10/elecar-responsive-car-website.git
 cd elecar-responsive-car-website
 open index.html
 No backend required—just open in any browser!
